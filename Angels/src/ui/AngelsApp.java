@@ -1,8 +1,8 @@
 package ui;
 
-class Angels{
+class AngelsApp{
 
-    Angels(){
+    AngelsApp(){
 
     }
 
