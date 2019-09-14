@@ -2,46 +2,51 @@ package model;
 
 public class Candle {
 
-    private String color, size, essence;
-    private double lighting;
+	private String color, essence;
+	private double lighting, size;
 
-    public Candle(String color, String size, String essence, double lighting) {
-        this.color = color;
-        this.size = size;
-        this.essence = essence;
-        this.lighting = lighting;
-    }
+	public Candle(String color, String essence, double lighting, double size) {
+		this.color = color;
+		this.essence = essence;
+		this.lighting = lighting;
+		this.size = size;
+	}
 
-    public String getColor() {
-        return color;
-    }
+	public String getColor() {
+		return color;
+	}
 
-    public void setColor(String color) {
-        this.color = color;
-    }
+	public void setColor(String color) {
+		this.color = color;
+	}
 
-    public String getSize() {
-        return size;
-    }
+	public String getEssence() {
+		return essence;
+	}
 
-    public void setSize(String size) {
-        this.size = size;
-    }
+	public void setEssence(String essence) {
+		this.essence = essence;
+	}
 
-    public String getEssence() {
-        return essence;
-    }
+	public double getLighting() {
+		return lighting;
+	}
 
-    public void setEssence(String essence) {
-        this.essence = essence;
-    }
+	public void setLighting(double lighting) {
+		this.lighting = lighting;
+	}
 
-    public double getLighting() {
-        return lighting;
-    }
+	public double getSize() {
+		return size;
+	}
 
-    public void setLighting(double lighting) {
-        this.lighting = lighting;
-    }
+	public void setSize(double size) {
+		this.size = size;
+	}
+
+	public String toString() {
+		return "   Color de la vela: " + color + "\n   Esencia de la vela: " + essence + "\n    Nivel de luminidad: "
+				+ lighting + "\n   Tamanio de la vela: " + size + "\n";
+	}
 
 }
