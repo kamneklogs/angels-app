@@ -4,11 +4,10 @@ import java.util.ArrayList;
 public class MaxSupLegion{
 
     private ArrayList<Angel> angels;
-    private String name;
+    
 
-    public MaxSupLegion(String name) {
+    public MaxSupLegion() {
         angels = new ArrayList<Angel>();
-        this.name = name;
     }
 
     public ArrayList<Angel> getAngels() {
