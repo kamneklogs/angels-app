@@ -1,0 +1,2 @@
+Main-Class: AngelsApp.class
+Class-Path: MiLibreria.jar

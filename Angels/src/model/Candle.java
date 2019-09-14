@@ -2,10 +2,10 @@ package model;
 
 public class Candle {
 
-	private String color, essence;
-	private double lighting, size;
+	private String color, essence, size;
+	private double lighting;
 
-	public Candle(String color, String essence, double lighting, double size) {
+	public Candle(String color, String essence, double lighting, String size) {
 		this.color = color;
 		this.essence = essence;
 		this.lighting = lighting;
@@ -36,11 +36,11 @@ public class Candle {
 		this.lighting = lighting;
 	}
 
-	public double getSize() {
+	public String getSize() {
 		return size;
 	}
 
-	public void setSize(double size) {
+	public void setSize(String size) {
 		this.size = size;
 	}
 

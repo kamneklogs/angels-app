@@ -8,6 +8,8 @@ public class MaxSupLegion {
     private final String AT = "AngelsApp 1.0";
     private final String[] MONTHS = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto",
             "Septiembre", "Octubre", "Noviembre", "Diciembre" };
+    
+     private final String[] SIZECANDLE = { "Pequnio", "Mediano", "Grande" };
 
     private ArrayList<Angel> angels;
 
@@ -24,8 +26,8 @@ public class MaxSupLegion {
     }
 
     public void addAngels() {
-        String name, type, photo, prayer, cMonth, cDay, power, color, essence;
-        double size, lighting;
+        String name, type, photo, prayer, cMonth, cDay, power, color, essence, size;
+        double  lighting;
         int opt; // To type's definition.
 
         do {
@@ -39,7 +41,8 @@ public class MaxSupLegion {
             cDay = JOptionPane.showInputDialog(null, "Dia de celebracion (dd):\n", AT, 3);
             power = JOptionPane.showInputDialog(null, "Poder (Todo en minusculas):\n", AT, 3);
             color = JOptionPane.showInputDialog(null, "Color de la vela:\n", AT, 3);
-            size = Double.parseDouble(JOptionPane.showInputDialog(null, "Tamanio de la vela:\n", AT, 3));
+            size = String.valueOf(
+                JOptionPane.showInputDialog(null, "Tamanio de la vela:\n", AT, 3, null, SIZECANDLE, SIZECANDLE[0]));
             essence = JOptionPane.showInputDialog(null, "Esencia de la vela:\n", AT, 3);
             lighting = Double.parseDouble(JOptionPane.showInputDialog(null, "Nivel de luminidad:\n", AT, 3));
 
