@@ -8,8 +8,8 @@ public class MaxSupLegion {
     private final String AT = "AngelsApp 1.0";
     private final String[] MONTHS = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto",
             "Septiembre", "Octubre", "Noviembre", "Diciembre" };
-    
-     private final String[] SIZECANDLE = { "Pequnio", "Mediano", "Grande" };
+
+    private final String[] SIZECANDLE = { "Pequnio", "Mediano", "Grande" };
 
     private ArrayList<Angel> angels;
 
@@ -27,14 +27,25 @@ public class MaxSupLegion {
 
     public void addAngels() {
         String name, type, photo, prayer, cMonth, cDay, power, color, essence, size;
-        double  lighting;
-        int opt; // To type's definition.
+        double lighting;
+        boolean aux = false;
+        int opt;
 
         do {
 
-            name = JOptionPane.showInputDialog(null, "Nombre:\n", AT, 3);
+            do {
+                name = JOptionPane.showInputDialog(null,
+                        "Nombre (Recuerde que el nombre de los Arcangeles empieza por mayuscula y termina en 'el'.):\n",
+                        AT, 3);
+                if (name.charAt(name.length() - 1) == 'l' && name.charAt(name.length() - 2) == 'e') {
+                    aux = true;
+                } else {
+                    JOptionPane.showMessageDialog(null, "El nombre no termina en 'el'.\n   Intente nuevamente\n", AT,
+                            0);
+                }
+            } while (aux == false);
             type = "Arcangel";
-            photo = JOptionPane.showInputDialog(null, "Link de la foto:\n", AT, 3);
+            photo = JOptionPane.showInputDialog(null, "Link de la fo to:\n", AT, 3);
             prayer = JOptionPane.showInputDialog(null, "Ingrese la oracion:\n", AT, 3);
             cMonth = String.valueOf(
                     JOptionPane.showInputDialog(null, "Mes de celebracion:\n", AT, 3, null, MONTHS, MONTHS[0]));
@@ -42,9 +53,9 @@ public class MaxSupLegion {
             power = JOptionPane.showInputDialog(null, "Poder (Todo en minusculas):\n", AT, 3);
             color = JOptionPane.showInputDialog(null, "Color de la vela:\n", AT, 3);
             size = String.valueOf(
-                JOptionPane.showInputDialog(null, "Tamanio de la vela:\n", AT, 3, null, SIZECANDLE, SIZECANDLE[0]));
+                    JOptionPane.showInputDialog(null, "Tamanio de la vela:\n", AT, 3, null, SIZECANDLE, SIZECANDLE[0]));
             essence = JOptionPane.showInputDialog(null, "Esencia de la vela:\n", AT, 3);
-            lighting = Double.parseDouble(JOptionPane.showInputDialog(null, "Nivel de luminidad:\n", AT, 3));
+            lighting = Double.parseDouble(JOptionPane.showInputDialog(null, "Candela (0 a 1000):\n", AT, 3));
 
             angels.add(new Angel(name, type, photo, prayer, cMonth, cDay, power,
                     new Candle(color, essence, lighting, size)));

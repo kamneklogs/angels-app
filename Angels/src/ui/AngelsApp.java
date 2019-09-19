@@ -18,7 +18,7 @@ class AngelsApp {
 
     public static void main(String[] args) {
         AngelsApp aa = new AngelsApp();
-
+             
         JOptionPane.showMessageDialog(null,
                 "BIENVENIDO(A) A ANGELSAPP, TU CONEXION ANGELICAL\n\nSelecciona 'OK' para continuar\n ", AT, 1);
         int opt;
