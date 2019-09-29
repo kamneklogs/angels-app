@@ -8,9 +8,6 @@ package model;
  */
 public class Angel {
 
-    //Constant
-    private static final String POWERS = "la protección, la salud, la abundancia, la justicia, la lealtad, pero el usuario puede crear más poderes. Cada arcángel se le asigna una vela especial, la cual tiene un color, un tamaño, una esencia y un grado de iluminancia.";
-
     //Angel's attributes
     private String name, type, photo, prayer, cDay, power, cMonth;
 
@@ -31,9 +28,6 @@ public class Angel {
 
     }
 
-    public static String getPowers() {
-        return POWERS;
-    }
 
     public String getName() {
         return name;

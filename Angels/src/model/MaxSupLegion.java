@@ -12,9 +12,9 @@ import java.util.Scanner;
 public class MaxSupLegion {
 
     //Constants
-    private final String[] MONTHS = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto",
+    public final String[] MONTHS = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto",
             "Septiembre", "Octubre", "Noviembre", "Diciembre" };
-    private final String[] SIZECANDLE = { "Pequnio", "Mediano", "Grande" };
+    public final String[] SIZECANDLE = { "Pequnio", "Mediano", "Grande" };
 
     //Scanner class's relation
     private Scanner r;
@@ -26,16 +26,6 @@ public class MaxSupLegion {
     public MaxSupLegion() {
         angels = new ArrayList<Angel>();
         r = new Scanner(System.in);
-    }
-
-
-
-    public ArrayList<Angel> getAngels() {
-        return angels;
-    }
-
-    public void setAngels(ArrayList<Angel> angels) {
-        this.angels = angels;
     }
 
 
