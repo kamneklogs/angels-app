@@ -1,13 +1,23 @@
 package model;
 
+/**
+ * This class represents an angel
+ * 
+ * @author Camilo Cordoba.
+ * @since 1.0
+ */
 public class Angel {
 
+    //Constant
     private static final String POWERS = "la protección, la salud, la abundancia, la justicia, la lealtad, pero el usuario puede crear más poderes. Cada arcángel se le asigna una vela especial, la cual tiene un color, un tamaño, una esencia y un grado de iluminancia.";
 
+    //Angel's attributes
     private String name, type, photo, prayer, cDay, power, cMonth;
 
+    //Relation
     private Candle candle;
 
+    //Constructor method
     public Angel(String name, String type, String photo, String prayer, String cMonth, String cDay, String power,
             Candle candle) {
         this.name = name;
@@ -80,7 +90,13 @@ public class Angel {
     public void setCandle(Candle candle) {
         this.candle = candle;
     }
-
+ 
+    /**
+     * This method is a basic toString with some modifications
+     * <b>pre:</b> Nothing <br>
+     * <b>post:</b> Something <br>
+     * @return Super String
+     */
     public String toString() {
         return "\n   Nombre: " + name + "\n   Tipo: " + type + "\n   Link de la foto: " + photo + "\n   Oracion: "
                 + prayer + "\n   Fecha de celebracion: " + cDay + " de " + cMonth + "\n   Poder:   " + power + "\n"
@@ -95,11 +111,23 @@ public class Angel {
         this.cMonth = cMonth;
     }
 
+    /**
+     * This method is a basic toString with some modifications
+     * <b>pre:</b> Nothing <br>
+     * <b>post:</b> Something <br>
+     * @return subString
+     */
     public String byMonth() {
         return "\n   Nombre: " + name + "\n   Dia: " + cDay + "\n   Color de la vela: " + getCandle().getColor()
                 + "\n   Esencia de la vela: " + getCandle().getEssence() + "\n";
     }
 
+    /**
+     * This method is a basic toString with some modifications
+     * <b>pre:</b> Nothing <br>
+     * <b>post:</b> Something <br>
+     * @return subString
+     */
     public String toFinalString() {
         return "\n   Nombre: " + name + "\n   Fecha de celebracion: " + cDay + " de " + cMonth + "\n";
     }

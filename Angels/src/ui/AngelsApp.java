@@ -3,18 +3,30 @@ package ui;
 import java.util.Scanner;
 import model.*;
 
+/**
+ * ANGELSAPP IS A TOOL THAT BRINGS YOU CLOSER TO HEAVEN
+ * 
+ * @author Camilo Cordoba.
+ * @since 1.0
+ */
 class AngelsApp {
 
+
+    //Constants
     static final String OPTSMENU = "Ingrese la opcion que desee realizar:\n\n   1. Ingresar arcangeles \n   2. Numero de arcangeles registrados\n   3. Desplegar la informacion del arcangel dado su nombre\n   4. Desplegar la informacion del arcangel dado su poder\n   5. Desplegar las celebraciones a realizar dado un mes\n   6. Desplegar todas las celebraciones\n\n   7. Salir.\n ";
     static final String AT = "AngelsApp 1.0";
+
+    //Relations
     private static Scanner r;
     private MaxSupLegion mLegion;
 
+    //Constructor method
     AngelsApp() {
         r = new Scanner(System.in);
         mLegion = new MaxSupLegion();
     }
 
+    //Main method
     public static void main(String[] args) {
         AngelsApp aa = new AngelsApp();
         System.out.println(
