@@ -96,7 +96,7 @@ public class Angel {
     }
 
     public String byMonth() {
-        return "\n   Nombre: " + name + "\n    Dia: " + cDay + "\n   Color de la vela: " + getCandle().getColor()
+        return "\n   Nombre: " + name + "\n   Dia: " + cDay + "\n   Color de la vela: " + getCandle().getColor()
                 + "\n   Esencia de la vela: " + getCandle().getEssence() + "\n";
     }
 

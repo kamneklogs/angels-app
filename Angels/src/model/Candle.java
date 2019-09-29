@@ -45,7 +45,7 @@ public class Candle {
 	}
 
 	public String toString() {
-		return "   Color de la vela: " + color + "\n   Esencia de la vela: " + essence + "\n    Nivel de luminidad: "
+		return "   Color de la vela: " + color + "\n   Esencia de la vela: " + essence + "\n   Nivel de luminidad: "
 				+ lighting + "\n   Tamanio de la vela: " + size + "\n";
 	}
 
